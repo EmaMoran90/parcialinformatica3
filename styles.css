@@ -1,0 +1,106 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc; /* Beige */
+}
+
+header {
+    display: flex; /* Utiliza Flexbox para el encabezado */
+    justify-content: space-between; /* Separa los elementos a los extremos */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
+    background-color: #003366; /* Azul */
+    color: white;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px; /* Ajusta según tu preferencia */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-bar {
+    position: absolute; /* Posiciona el formulario en la parte superior derecha */
+    top: 20px;
+    right: 20px;
+    max-width: 300px; /* Limita el ancho máximo del formulario */
+    width: 100%; /* Permite que el formulario se ajuste al contenedor */
+}
+
+input[type="text"] {
+    width: 100%; /* Asegura que el campo de texto ocupe todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Bordes del campo */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative; /* Para el posicionamiento de las imágenes */
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images a {
+    flex: 0 0 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+}
+
+.carousel-images img {
+    width: 100%; /* Hace que todas las imágenes se ajusten al contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+
+.info-box {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    background-color: #003366; /* Azul */
+    color: white;
+    padding: 10px;
+}
+
+.social-icons img {
+    width: 24px; /* Ajusta según tu preferencia */
+    margin: 0 5px;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .search-bar {
+        position: relative; /* Cambia a posición relativa en pantallas pequeñas */
+        top: 0; /* Ajusta la posición */
+        right: 0; /* Ajusta la posición */
+        margin-top: 10px; /* Espaciado superior */
+    }
+
+    header {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+}
